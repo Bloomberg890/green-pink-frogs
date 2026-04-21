@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="Frogs Toads"
+run/main_scene="uid://m4wumkyhfri8"
 config/features=PackedStringArray("4.4", "Mobile")
 config/icon="res://icon.svg"
+
+[display]
+
+window/stretch/mode="viewport"
+window/main_scene=""
 
 [input]
 

@@ -18,7 +18,7 @@ func _ready():
 	$HUD.quit_pressed.connect(quit_game)
 
 	$HUD.show_menu()
-
+	$HUD/Fireworks.visible = false   # 👈 ADD THIS
 
 # ------------------------
 # GAME CONTROL
@@ -27,6 +27,7 @@ func start_game():
 	state = GameState.PLAYING
 	reset_game()
 	$HUD.show_game()
+	$HUD/Fireworks.visible = false   # 👈 ADD THIS
 
 
 func quit_game():
@@ -80,6 +81,7 @@ func win():
 	state = GameState.WIN
 	$HUD.show_win()
 	print("WIN")
+	$HUD/Fireworks.visible = true   # 👈 ADD THIS
 
 
 func lose():
